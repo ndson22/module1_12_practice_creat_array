@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tinh_lai_ngan_hang</title>
+</head>
+<body>
+	<input type="text" id="txtValue">
+	<button type="button" id="addArray">Add</button>
+	<button type="button" id="displayArray">Display</button>
+	<hr>
+	<p id="result"></p>
+<script type="text/javascript">
+	let array = [];
+	let i = 0;
+	document.getElementById("addArray").addEventListener('click',function(){
+		array.push(document.getElementById("txtValue").value);
+		alert("add item " + document.getElementById("txtValue").value + " in index " + i);
+		i++;
+	})
+	document.getElementById("displayArray").addEventListener('click',function(){
+		array.forEach(myFunction);
+		function myFunction(item,index){
+			document.getElementById("result").innerHTML += "element " + " " + index + " = " + item + "<br>";
+		}
+	})
+	
+</script>
+</body>
+</html>
